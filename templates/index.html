@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<h1>Welcome to MenuGen</h1>
+    <a href={{ url_for("generate_menu") }}> Generate Menu</a>
+    <a href={{ url_for("add_recipe") }} %}>Add Recipe</a>
+
+    <h1>Recipe List</h1>
+    {% for recipe in recipes %}
+     <div>
+        <p style="display: inline-block">Title: {{ recipe.title }}</p>
+        <a href="{{ recipe.url }}" style="">Link</a>
+    {% endfor %}
+    </div>
+
+{% endblock %}

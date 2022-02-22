@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{%  block title %} Menu {% endblock %}
+{% block content %}
+    {% for day,recipe in days_recipes %}
+    <div>
+    <p>{{ day }}: {{ recipe.title }}
+        <a href="{{ recipe.url }}">link</a>
+    </p>
+    </div>
+    {% endfor %}
+{% endblock %}
